@@ -1,9 +1,75 @@
 .window {
-  font-size: 50px;
-  color: red;
-  margin-top: 30px;
+  margin: 20px auto;
   width: 800px;
-  height: 500px;
-  display: flex;
-  border: 2px solid rgba(10, 10, 10, 0.8);
+  border: 3px solid rgba(10, 10, 10, 0.7);
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(10, 10, 10, 0.15);
+  background: linear-gradient(to bottom, rgba(10, 20, 30, 0.3), rgba(10, 20, 30, 0.6));
+
+  &__title {
+    width: 100%;
+    height: fit-content;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 10px;
+    text-align: center;
+    border-bottom: 3px solid rgba(10, 10, 10, 0.7);
+    background-color: rgba(10, 10, 10, 0.2);
+    user-select: none;
+    text-transform: uppercase;
+  }
+
+  &__workspace {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+}
+
+.card {
+  margin: 10px 0;
+  width: 30%;
+  height: 150px;
+  padding: 10px;
+  border: 2px solid rgba(10, 10, 10, 0.7);
+  border-radius: 5px;
+  box-shadow: 5px 5px rgba(10, 10, 10, 0.15);
+  background: linear-gradient(to bottom, rgba(150, 150, 150, 0.7), rgba(150, 150, 150, 0.4));
+  overflow: hidden;
+    transition:scale 0.2s ease-in-out;
+
+
+  &:hover{
+    scale: 1.02;
+    transition:scale 0.2s ease-in-out;
+  }
+
+  &__link {
+    width: 80%;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(10, 10, 10, 0.8);
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: rgba(50, 50, 50, 0.8);
+    }
+  }
+
+  &__title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.7);
+  }
+  &__description {
+    width: 100%;
+    // max-height: ;
+    overflow: hidden;
+    font-style: italic;
+    padding-top: 5px;
+  }
 }
