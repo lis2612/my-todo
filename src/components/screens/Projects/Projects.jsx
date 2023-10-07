@@ -1,11 +1,11 @@
 import React from 'react'
-import './Projects.module.scss'
 import Window from '../../generic/Window'
+import './Projects.module.scss'
 
 function Projects() {
   return (
     <>
-    <Window/>
+    <Window />
     </>
   )
 }
