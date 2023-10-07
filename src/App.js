@@ -1,10 +1,11 @@
-import './App.css';
+import './App.scss';
 import Router from './components/Router';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <h1 className="app__title">myTODO</h1>
       <Router />
     </div>
   );

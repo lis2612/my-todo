@@ -1,8 +1,12 @@
 import React from 'react'
+import './Projects.module.scss'
+import Window from '../../generic/Window'
 
 function Projects() {
   return (
-    <div>Projects</div>
+    <>
+    <Window/>
+    </>
   )
 }
 
