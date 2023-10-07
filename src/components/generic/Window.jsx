@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Window.module.scss";
 import { Link } from "react-router-dom";
 
 function Window() {
-  const projects = [
+const [projects, setProjects] = useState([
     {
       id: 1,
       title: "Pro1",
@@ -40,7 +40,11 @@ function Window() {
       title: "Pro1",
       description: "Empty project",
     },
-  ];
+  ])
+
+  const createProject = () => {
+    setProjects((prev) => [...prev, { id: projects.length, title: "new pro", description: "hghsd jhsdf jshdgf" }]);
+  }
 
   return (
     <>
@@ -60,6 +64,7 @@ function Window() {
               </div>
             );
           })}
+          <button className={styles.create} title="Create project" onClick={()=>createProject()}>+</button>
         </div>
       </div>
     </>

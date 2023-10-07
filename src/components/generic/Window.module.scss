@@ -1,6 +1,8 @@
 .window {
+  position: relative;
   margin: 20px auto;
   width: 800px;
+  min-height: 200px;
   border: 3px solid rgba(10, 10, 10, 0.7);
   border-radius: 10px;
   box-shadow: 5px 5px rgba(10, 10, 10, 0.15);
@@ -21,17 +23,17 @@
 
   &__workspace {
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:flex-start;
     padding: 10px 20px;
   }
 }
 
 .card {
-  margin: 10px 0;
-  width: 30%;
+  margin: 10px 10px;
+width: calc((100% - 40px - 20px)/3);
+  // width: 30%;
   height: 150px;
   padding: 10px;
   border: 2px solid rgba(10, 10, 10, 0.7);
@@ -39,12 +41,11 @@
   box-shadow: 5px 5px rgba(10, 10, 10, 0.15);
   background: linear-gradient(to bottom, rgba(150, 150, 150, 0.7), rgba(150, 150, 150, 0.4));
   overflow: hidden;
-    transition:scale 0.2s ease-in-out;
+  transition: scale 0.2s ease-in-out;
 
-
-  &:hover{
+  &:hover {
     scale: 1.02;
-    transition:scale 0.2s ease-in-out;
+    transition: scale 0.2s ease-in-out;
   }
 
   &__link {
@@ -71,5 +72,25 @@
     overflow: hidden;
     font-style: italic;
     padding-top: 5px;
+  }
+}
+
+.create {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 70px;
+  width: 70px;
+  font-size: 50px;
+  font-weight: 700;
+  border: 3px solid rgba(10, 10, 10, 0.7);
+  border-radius: 50%;
+  background-color: rgba(150, 150, 150, 0.4);
+  transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+    background-color: rgba(150, 150, 150, 0.9);
+    transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out;
   }
 }
