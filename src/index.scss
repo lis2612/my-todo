@@ -1,9 +1,43 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Black.eot");
+  src: url("../public/fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Roboto-Black.woff") format("woff"), url("../public/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Medium.eot");
+  src: url("../public/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Roboto-Medium.woff") format("woff"),
+    url("../public/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Regular.eot");
+  src: url("../public/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Roboto-Regular.woff") format("woff"),
+    url("../public/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Reset styles  */
 
 * {
   padding: 0px;
   margin: 0px;
   border: none;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
 
   &,
   &::before,
@@ -51,13 +85,13 @@ li {
 
 img {
   vertical-align: top;
-
 }
 
-img, svg {
-    max-width: 100%;
-    height: auto;
-  }
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
 
 address {
   font-style: normal;
@@ -79,7 +113,7 @@ input::-ms-clear {
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
