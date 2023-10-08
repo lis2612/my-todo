@@ -53,11 +53,9 @@ function Window() {
           return (
             <Link
               className={styles.card}
-              to={`/project/${project.id}`}>
-              
-                <h3 className={styles.card__title}>{project.title}</h3>
-                <p className={styles.card__description}>{project.description}</p>
-
+              to={`/projects/${project.id}`}>
+              <h3 className={styles.card__title}>{project.title}</h3>
+              <p className={styles.card__description}>{project.description}</p>
             </Link>
           );
         })}
