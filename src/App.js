@@ -1,11 +1,12 @@
 import './App.scss';
 import Router from './components/Router';
+import Header from './components/screens/Header/Header';
 
 
 function App() {
   return (
     <div className="app">
-      <h1 className="app__title">myTODO</h1>
+      <Header/>
       <Router />
     </div>
   );

@@ -48,25 +48,32 @@ const [projects, setProjects] = useState([
 
   return (
     <>
-      <div className={styles.window}>
-        <h2 className={styles.window__title}>My projects</h2>
-        <div className={styles.window__workspace}>
-          {projects.map((project) => {
-            return (
-              <div className={styles.card}>
-                <Link
-                  className={styles.card__link}
-                  to={`/project/${project.id}`}>
-                  <h3 className={styles.card__title}>{project.title}</h3>
-                </Link>
+      <div className={styles.container}>
+        {projects.map((project) => {
+          return (
+            <div className={styles.card}>
+              <Link
+                className={styles.card__link}
+                to={`/project/${project.id}`}>
+                <h3 className={styles.card__title}>{project.title}</h3>
+              </Link>
 
-                <p className={styles.card__description}>{project.description}</p>
-              </div>
-            );
-          })}
-          <button className={styles.create} title="Create project" onClick={()=>createProject()}>+</button>
-        </div>
+              <p className={styles.card__description}>{project.description}</p>
+            </div>
+          );
+        })}
+        <button
+          className={styles.create}
+          title="Create project"
+          onClick={() => createProject()}>
+          +
+        </button>
       </div>
+
+      {/* <div className={styles.window}>
+        <h2 className={styles.window__title}>My projects</h2>
+        <div className={styles.window__workspace}></div>
+      </div> */}
     </>
   );
 }
