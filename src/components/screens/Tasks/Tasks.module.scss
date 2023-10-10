@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .canban {
   margin: 0 auto;
   width: 90%;
@@ -16,13 +18,13 @@
     0px 0px 2px 0px rgba(0, 0, 0, 0.14);
 
     &[id="queue"] {
-      background-color: #3dc2ff;
+      background-color: $primary-shade;
     }
     &[id="development"] {
-      background-color: #ffca22;
+      background-color: $warning-shade;
     }
     &[id="done"] {
-      background-color: #2dd36f;
+      background-color: $success-shade;
     }
   }
 
