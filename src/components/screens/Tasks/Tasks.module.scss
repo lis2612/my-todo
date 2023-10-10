@@ -1,18 +1,32 @@
-.canban{
+.canban {
   margin: 0 auto;
   width: 90%;
+  gap: 5px;
   // height: 100%;
   display: flex;
-  border: 1px solid grey;
-  border-radius: 10px;
-  &__column{
+
+  &__column {
     width: calc(1 / 3 * 100%);
     display: flex;
     flex-direction: column;
     padding: 0 5px;
+    border: 1px solid rgba(10, 10, 10, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 0px 2px 0px rgba(0, 0, 0, 0.14);
+
+    &[id="queue"] {
+      background-color: #3dc2ff;
+    }
+    &[id="development"] {
+      background-color: #ffca22;
+    }
+    &[id="done"] {
+      background-color: #2dd36f;
+    }
   }
 
-  &__columnTitle{
+  &__columnTitle {
     width: 100%;
     height: 30px;
     display: flex;
@@ -20,15 +34,67 @@
     justify-content: center;
     font-size: 18px;
     font-weight: 600;
+    text-transform: capitalize;
   }
 }
 
-.card{
-  border: 1px solid black ;
-  border-radius: 5px;
-  margin: 3px 0;
+// .card {
+//   border: 1px solid black;
+//   border-radius: 5px;
+//   margin: 3px 0;
+//   padding: 10px;
+//   background-color: #ffffff;
+//   &__title {
+//     font-weight: 600;
+//   }
+// }
+
+.card {
+  margin: 5px 10px;
+  display: flex;
   padding: 10px;
-  &__title{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  background: #fff;
+  color: rgba(10, 10, 10, 0.8);
+
+  /* 2dp — Elevation */
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 0px 2px 0px rgba(0, 0, 0, 0.14);
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.02;
+    transition: scale 0.2s ease-in-out;
+  }
+
+  &__link {
+    width: 100%;
+    font-size: 18px;
     font-weight: 600;
+    color: rgba(10, 10, 10, 0.8);
+
+    &:visited {
+      color: rgba(50, 50, 50, 0.8);
+    }
+  }
+
+  &__title {
+    width: 100%;
+    padding-bottom: 5px;
+    font-weight: 500;
+    border-bottom: 1px solid #d7d8da;
+  }
+  &__description {
+    width: 100%;
+    // max-height: ;
+    overflow: hidden;
+    font-style: normal;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%; /* 28.8px */
   }
 }
