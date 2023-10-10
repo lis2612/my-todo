@@ -12,7 +12,7 @@ const Router = () => {
         />
         <Route
           element={<Tasks/>}
-          path="/projects/:id"
+          path="/project/:id"
         />
 
         {/* Route for not found page */}

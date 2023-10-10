@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./Card.module.scss";
-import { Link } from "react-router-dom";
 
 function Card(props) {
   return (
-    <Link
+    <div
       className={styles.card + " " + props.className}
-      to={props.to}>
+      id={props.id}
+      onClick={props.onClick}
+    >
       {props.children}
-    </Link>
+    </div>
   );
 }
 
