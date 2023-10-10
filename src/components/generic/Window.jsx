@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Window.module.scss";
 import { Link } from "react-router-dom";
 
@@ -66,11 +66,6 @@ function Window() {
           +
         </button>
       </div>
-
-      {/* <div className={styles.window}>
-        <h2 className={styles.window__title}>My projects</h2>
-        <div className={styles.window__workspace}></div>
-      </div> */}
     </>
   );
 }
