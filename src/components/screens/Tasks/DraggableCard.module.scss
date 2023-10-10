@@ -13,11 +13,17 @@
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 0px 2px 0px rgba(0, 0, 0, 0.14);
 
+    overflow: hidden;
+
   &:hover {
     cursor: pointer;
     scale: 1.02;
     transition: scale 0.2s ease-in-out;
     background-color: lighten($light, 2);
+  }
+
+  &__number{
+    font-weight: 700;
   }
 
   &__title {

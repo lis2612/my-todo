@@ -14,6 +14,9 @@ function Tasks() {
       title: "task1",
       description: "this is task for project 1",
       status: "development",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'high',
     },
     {
       id: 2,
@@ -21,6 +24,9 @@ function Tasks() {
       title: "task2",
       description: "this is task for project 1",
       status: "done",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'middle',
     },
     {
       id: 3,
@@ -28,6 +34,9 @@ function Tasks() {
       title: "task3",
       description: "this is task for project 1",
       status: "queue",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'low',
     },
     {
       id: 4,
@@ -35,6 +44,9 @@ function Tasks() {
       title: "task4",
       description: "this is task for project 1",
       status: "development",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'middle',
     },
     {
       id: 5,
@@ -42,6 +54,9 @@ function Tasks() {
       title: "task5",
       description: "this is task for project 1",
       status: "done",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'high',
     },
     {
       id: 6,
@@ -49,6 +64,9 @@ function Tasks() {
       title: "task6",
       description: "this is task for project 1",
       status: "queue",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'high',
     },
     {
       id: 7,
@@ -56,8 +74,12 @@ function Tasks() {
       title: "task7",
       description: "this is task for project 1",
       status: "queue",
+      created:'1693454546',
+      deadline:'1697773654',
+      priority:'low',
     },
   ]);
+
 
   const statusList = ["queue", "development", "done"];
 
@@ -76,7 +98,7 @@ function Tasks() {
             <Column
               id={status}
               key={status}>
-              {tasks
+              {                 tasks
                 .filter((task) => task.projectId === +id)
                 .filter((task) => task.status === status)
                 .map((task) => {
