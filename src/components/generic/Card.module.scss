@@ -1,0 +1,19 @@
+@import '../colors.scss';
+.card {
+  max-width: 400px;
+  padding: 10px;
+  gap: 4px;
+  border-radius: 8px;
+  background: $light;
+  color:$dark-tint;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+  transition: scale 0.2s ease-in-out;
+
+    &:hover {
+    cursor: pointer;
+    scale: 1.02;
+    transition: scale 0.2s ease-in-out;
+    background-color: lighten($light, 2);
+  }
+}
