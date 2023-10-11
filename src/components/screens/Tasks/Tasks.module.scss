@@ -2,7 +2,8 @@
 
 .canban {
   margin: 0 auto;
-  width: 90%;
+  width: 90vw;
+  max-width: 1200px;
   gap: 5px;
   display: flex;
 }

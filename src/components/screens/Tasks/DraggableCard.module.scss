@@ -13,7 +13,7 @@
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 0px 2px 0px rgba(0, 0, 0, 0.14);
 
-    overflow: hidden;
+  overflow: hidden;
 
   &:hover {
     cursor: pointer;
@@ -22,7 +22,7 @@
     background-color: lighten($light, 2);
   }
 
-  &__number{
+  &__number {
     font-weight: 700;
   }
 
@@ -36,9 +36,22 @@
     width: 100%;
     overflow: hidden;
     font-style: normal;
-    padding-top: 5px;
+    padding: 5px 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
+    border-bottom: 1px solid $light-shade;
+  }
+
+  &__dates {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__date {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 120%;
   }
 }
