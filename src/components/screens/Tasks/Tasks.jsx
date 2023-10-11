@@ -1,9 +1,13 @@
 import { DndContext } from "@dnd-kit/core";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import ActionButton from "../../generic/ActionButton";
+import add from "../../icons/add.svg";
 import Column from "./Column";
 import DraggableCard from "./DraggableCard";
 import styles from "./Tasks.module.scss";
+const { DateTime } = require("luxon");
+
 
 function Tasks() {
   const { id } = useParams();
@@ -90,6 +94,20 @@ function Tasks() {
     setTasks([...newTasks, changedTask]);
   };
 
+  const createTask = () => {
+    const newTask = {
+      id: tasks.length + 1,
+      projectId: 1,
+      title: `task ${tasks.length + 1}`,
+      description: "new task",
+      status: "queue",
+      created: DateTime.now().toSeconds(),
+      deadline: DateTime.now().plus({days:2}).toSeconds(),
+      priority: "high",
+    };
+    setTasks((prev) => [...prev, newTask]);
+  };
+
   return (
     <>
       <div className={styles.canban}>
@@ -98,7 +116,7 @@ function Tasks() {
             <Column
               id={status}
               key={status}>
-              {                 tasks
+              {tasks
                 .filter((task) => task.projectId === +id)
                 .filter((task) => task.status === status)
                 .map((task) => {
@@ -111,6 +129,11 @@ function Tasks() {
                 })}
             </Column>
           ))}
+
+          <ActionButton
+            onClick={createTask}
+            img={add}
+          />
         </DndContext>
       </div>
     </>
